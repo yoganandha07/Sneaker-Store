@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.store {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    color: brown;
+}
+
+.shoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+}
+
+.lessopaque {
+    opacity: 0.6;
+}
+
+/* Responsive Typography */
+h1 {
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.description p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+    .card {
+        padding: 8px;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .image img {
+        height: 180px;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .description p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .image img {
+        height: 150px;
+    }
+
+    .details {
+        padding: 5px 0;
+    }
+
+    .cart img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .description p {
+        font-size: 0.7rem;
+    }
+}
+    
